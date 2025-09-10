@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:more/constant.dart';
-import 'package:more/report_item.dart';
-import 'package:more/report_item_tile.dart';
+import 'package:more/report/constant/constant.dart';
+import 'package:more/report/models/report_item.dart';
+import 'package:more/report/widgets/report_item_tile.dart';
 
 class ReportSectionCard extends StatelessWidget {
   final List<ReportItem> items;

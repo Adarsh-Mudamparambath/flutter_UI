@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:more/report_item.dart';
-import 'package:more/report_section.dart';
+import 'package:more/report/models/report_item.dart';
+import 'package:more/report/models/report_section.dart';
 
 //   Provides the initial list of sections and items.
 

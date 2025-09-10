@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:more/constant.dart';
+import 'package:more/report/constant/constant.dart';
 
 class ReportItemTile extends StatelessWidget {
   final IconData icon;

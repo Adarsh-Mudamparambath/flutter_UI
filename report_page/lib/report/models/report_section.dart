@@ -1,5 +1,5 @@
 
-import 'package:more/report_item.dart';
+import 'package:more/report/models/report_item.dart';
 
 class ReportSection {
   final List<ReportItem> items;

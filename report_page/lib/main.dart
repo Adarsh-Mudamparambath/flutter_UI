@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:more/reports_page.dart';
-import 'package:more/theme.dart';
+import 'package:more/report/pages/reports_page.dart';
+import 'package:more/report/theme/theme.dart';
 
 void main() => runApp(const MyApp());
 
