@@ -34,7 +34,7 @@ class ReportSectionCard extends StatelessWidget {
                     );
                   },
                 ),
-                if (index != items.length - 1) const ReportDivider(), // ✅ use custom divider
+                if (index != items.length - 1) const ReportDivider(), //  use custom divider
               ],
             ),
           ),
