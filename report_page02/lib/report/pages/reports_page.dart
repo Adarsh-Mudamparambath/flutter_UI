@@ -10,10 +10,10 @@ class ReportsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Reports'),
-        toolbarHeight: 72, // taller AppBar for this page
-      ),
+      //appBar: AppBar(
+       // title: const Text('Reports'),
+       // toolbarHeight: 72, // taller AppBar for this page
+      //),
       body: ListView.separated(
         padding: const EdgeInsets.fromLTRB(16, 32, 16, 24),
         itemCount: sections.length,

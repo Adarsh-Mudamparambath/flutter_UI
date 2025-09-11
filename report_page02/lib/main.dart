@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:report_page02/bottom_nav/widgets/bottom_nav.dart';
+import 'package:report_page02/base/pages/base_page.dart';
 //import 'package:report_page02/more/pages/more_page.dart';
 //import 'package:report_page02/report/pages/reports_page.dart';
 import 'package:report_page02/report/theme/theme.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: buildLightTheme(), // all colors live in theme.dart
       home: //const ReportsPage(),
       //MorePage(),
-      BottomNavExample(),
+      BasePage(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -13,7 +13,7 @@ class MorePage extends StatelessWidget {
     
 
     return Scaffold(
-      appBar: AppBar(title: const Text("More")),
+      //appBar: AppBar(title: const Text("More")),
       body: SafeArea(
         bottom: true,
         child: ListView.builder(
