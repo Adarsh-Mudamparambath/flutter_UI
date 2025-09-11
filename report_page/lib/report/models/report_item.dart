@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ReportItem {
+  final String title;
   final IconData icon;
-  final String label;
-  final VoidCallback? onTap;
-  const ReportItem({required this.icon, required this.label, this.onTap});
-}
+  final Widget page;
 
-//Data model for a single row (tile) inside a card.
+  const ReportItem({
+    required this.title,
+    required this.icon,
+    required this.page,
+  });
+}

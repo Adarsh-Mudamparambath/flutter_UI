@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:more/report/constant/constant.dart';
 
+/// Builds and returns a light theme for the report page.
+/// The theme customizes colors, text styles, AppBar, Card, and Divider styles.
+/// Uses Material 3 design principles.
+/// The primary color is a dark grey, with light backgrounds and subtle dividers.
+/// Text styles are set for medium titles and body text.
+
 ThemeData buildLightTheme() {
   final base = ThemeData(
     colorScheme: ColorScheme.fromSeed(

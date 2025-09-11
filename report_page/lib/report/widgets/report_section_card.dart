@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:more/report/constant/constant.dart';
 import 'package:more/report/models/report_item.dart';
-import 'package:more/report/widgets/report_item_tile.dart';
+import 'report_item_tile.dart';
+import 'divider.dart';
 
 class ReportSectionCard extends StatelessWidget {
   final List<ReportItem> items;
@@ -9,10 +10,6 @@ class ReportSectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final divider = Divider(
-      height: 1, thickness: 1, color: Theme.of(context).dividerColor,
-    );
-
     return Card(
       elevation: 0,
       shape: RoundedRectangleBorder(
@@ -21,20 +18,26 @@ class ReportSectionCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(kCardRadius),
         child: Column(
-          children: [
-            for (int i = 0; i < items.length; i++) ...[
-              ReportItemTile(
-                icon: items[i].icon,
-                label: items[i].label,
-                onTap: items[i].onTap,
-              ),
-              if (i != items.length - 1) divider,
-            ],
-          ],
+          children: List.generate(
+            items.length,
+            (index) => Column(
+              children: [
+                ReportItemTile(
+                  icon: items[index].icon,
+                  label: items[index].title,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => items[index].page),
+                    );
+                  },
+                ),
+                if (index != items.length - 1) const ReportDivider(), // ✅ use custom divider
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
 }
-
-
