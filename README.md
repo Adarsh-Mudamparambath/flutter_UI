@@ -3,7 +3,7 @@
 ## Completed Pages
 
 ### 📊 Report Page
-- **File**: `pages/report_page.dart`
+- **File**: `report/pages/report_page.dart`
 - **Status**: ✅ Done
 - **Function**:  
   Displays the **Report section** of the app.  
@@ -12,7 +12,7 @@
   - Custom Bottom Navigation Bar  
 
 ### ➕ More Page
-- **File**: `pages/more_page.dart`
+- **File**: `more/pages/more_page.dart`
 - **Status**: ✅ Done
 - **Function**:  
   Displays the **More section** of the app.  
