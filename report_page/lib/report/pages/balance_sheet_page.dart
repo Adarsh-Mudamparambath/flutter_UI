@@ -11,15 +11,6 @@ class BalanceSheetPage extends StatelessWidget {
   }
 }
 
-class ProfitLossPage extends StatelessWidget {
-  const ProfitLossPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Profit & Loss Page")),
-    );
-  }
-}
 
 // add other dummy pages similarly...

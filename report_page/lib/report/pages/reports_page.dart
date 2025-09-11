@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../data/reports_seed.dart';
-import '../widgets/report_section_card.dart';
+import 'package:more/report/data/reports_data.dart';
+import 'package:more/report/widgets/report_section_card.dart';
 
 class ReportsPage extends StatelessWidget {
   const ReportsPage({super.key});
