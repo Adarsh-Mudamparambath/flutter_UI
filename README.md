@@ -1,23 +1,27 @@
-# 📊 Reports Page – Flutter
+# Project Documentation
 
-A clean, modular Flutter implementation of a **Reports UI page**.  
-The page uses cards (containers) with 4 tappable components each.  
-When a component is tapped, a short floating message (SnackBar) fades in/out.
+## Completed Pages
+
+### 📊 Report Page
+- **File**: `pages/report_page.dart`
+- **Status**: ✅ Done
+- **Function**:  
+  Displays the **Report section** of the app.  
+  Currently implemented as a placeholder text with integration to:
+  - Custom AppBar (dynamic title: *Report*)  
+  - Custom Bottom Navigation Bar  
+
+### ➕ More Page
+- **File**: `pages/more_page.dart`
+- **Status**: ✅ Done
+- **Function**:  
+  Displays the **More section** of the app.  
+  Currently implemented as a placeholder text with integration to:
+  - Custom AppBar (dynamic title: *More*)  
+  - Custom Bottom Navigation Bar  
 
 ---
 
-## 🚀 Features
-- White background
-- AppBar and Cards share the same light grey color
-- AppBar height increased (72 px for this page only)
-- Cards with rounded corners and inner dividers
-- Each row (tile) has:
-  - Leading icon
-  - Label text
-  - Ripple tap feedback
-- On tap → shows a floating SnackBar that disappears automatically
-- Constants and theme are centralized for easy changes
-
----
-
-
+## Notes
+- Both pages are fully wired into the **BasePage** using the custom navigation system.
+- They are placeholders and ready to be expanded with future features.
