@@ -20,15 +20,18 @@ ThemeData buildLightTheme() {
   );
 
   return base.copyWith(
-    appBarTheme: const AppBarTheme(
-      backgroundColor: kLightGrey,
-      elevation: 0,
-      centerTitle: false,
-      foregroundColor: Colors.black87,
-      titleTextStyle: TextStyle(
-        fontSize: 22, fontWeight: FontWeight.w700, color: Colors.black87,
-      ),
-    ),
+  appBarTheme: const AppBarTheme(
+  backgroundColor: kLightGrey,
+  elevation: 0,
+  centerTitle: false,
+  foregroundColor: Colors.black87,
+  surfaceTintColor: Colors.transparent, // <- stop overlay/tint
+  scrolledUnderElevation: 0,            // <- stop “scrolled under” shadow/tone
+  titleTextStyle: TextStyle(
+    fontSize: 22, fontWeight: FontWeight.w700, color: Colors.black87,
+  ),
+),
+
     cardColor: kLightGrey,
     dividerColor: kDividerGrey,
     textTheme: base.textTheme.copyWith(

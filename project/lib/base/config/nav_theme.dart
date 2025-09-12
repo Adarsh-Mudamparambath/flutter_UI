@@ -15,7 +15,7 @@ class NavTheme {
     showUnselectedLabels: true,
     elevation: 0,
     backgroundColor: Colors.white,
-  );
+  ); 
 
   // AppBar theme to stop color shift on scroll
   static const AppBarTheme appBarTheme = AppBarTheme(
