@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:project02/item_summary/widgets/big_kpi_value.dart';
-import 'package:project02/item_summary/widgets/custom_app_bar.dart';
-import 'package:project02/item_summary/widgets/custom_button.dart';
-import 'package:project02/item_summary/widgets/custom_divider.dart';
-import 'package:project02/item_summary/widgets/info_section.dart';
-import 'package:project02/item_summary/widgets/month_selector.dart';
-import 'package:project02/item_summary/widgets/summary_card_tile.dart';
+import 'package:project02/summary/widgets/big_kpi_value.dart';
+import 'package:project02/summary/widgets/custom_app_bar.dart';
+import 'package:project02/summary/widgets/custom_button.dart';
+import 'package:project02/summary/widgets/custom_divider.dart';
+import 'package:project02/summary/widgets/info_section.dart';
+import 'package:project02/summary/widgets/month_selector.dart';
+import 'package:project02/summary/widgets/summary_card_tile.dart';
 
 class TripSummaryPage extends StatelessWidget {
   const TripSummaryPage({super.key});

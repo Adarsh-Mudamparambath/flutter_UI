@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project02/item_summary/theme/app_colors.dart';
-import 'package:project02/item_summary/widgets/custom_app_bar.dart';
-import 'package:project02/item_summary/widgets/custom_button.dart';
-import 'package:project02/item_summary/widgets/info_section.dart';
-import 'package:project02/item_summary/widgets/month_selector.dart';
-import 'package:project02/item_summary/widgets/section_header.dart';
-import 'package:project02/item_summary/widgets/summary_card_tile.dart';
+import 'package:project02/summary/theme/app_colors.dart';
+import 'package:project02/summary/widgets/custom_app_bar.dart';
+import 'package:project02/summary/widgets/custom_button.dart';
+import 'package:project02/summary/widgets/custom_divider.dart';
+import 'package:project02/summary/widgets/info_section.dart';
+import 'package:project02/summary/widgets/month_selector.dart';
+import 'package:project02/summary/widgets/section_header.dart';
+import 'package:project02/summary/widgets/summary_card_tile.dart';
 
 class CustomerSummaryPage extends StatelessWidget {
   const CustomerSummaryPage({super.key});
@@ -76,6 +77,7 @@ const InfoSection(
 
               // Card with multiple tiles
               Container(
+                padding: const EdgeInsets.only(bottom: 10),
                 decoration: BoxDecoration(
                   color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(8),
@@ -91,12 +93,8 @@ const InfoSection(
                       number: "0001",
                     ),
 
-                    Divider(
-                      color: Colors.black.withOpacity(0.2),
-                      indent: 10,
-                      endIndent: 10,
-                      thickness: 1,
-                    ),
+                                     CustomDivider(),
+
 
                     // Tile 2 - one label
                     const SummaryCardTile(
@@ -107,12 +105,8 @@ const InfoSection(
                       number: "0002",
                     ),
 
-                    Divider(
-                      color: Colors.black.withOpacity(0.2),
-                      indent: 10,
-                      endIndent: 10,
-                      thickness: 1,
-                    ),
+                                      CustomDivider(),
+
 
                     // Tile 3 - two labels
                     const SummaryCardTile(
@@ -123,7 +117,7 @@ const InfoSection(
                       label2: "Unit sold",
                       value2: "1000 unit",
                       number: "0003",
-                    ),
+                    ), CustomDivider(),
                   ],
                 ),
               ),

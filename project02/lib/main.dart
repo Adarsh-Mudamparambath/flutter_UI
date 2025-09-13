@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project02/item_summary/pages/customer_summary_page.dart';
-import 'package:project02/item_summary/pages/item_summary_page.dart';
-import 'package:project02/item_summary/pages/trip_summary_page.dart';
-import 'package:project02/item_summary/theme/app_theme.dart';
+import 'package:project02/summary/pages/customer_summary_page.dart';
+import 'package:project02/summary/pages/item_summary_page.dart';
+import 'package:project02/summary/pages/trip_summary_page.dart';
+import 'package:project02/summary/theme/app_theme.dart';
 
 
 void main() {
