@@ -13,7 +13,8 @@ class SectionHeader extends StatelessWidget {
         title,
         style: GoogleFonts.openSans(
           fontSize: 14,
-          fontWeight: FontWeight.w600, // weight 600
+          fontWeight: FontWeight.w600, // semi-bold
+          color: Colors.black,
         ),
       ),
     );

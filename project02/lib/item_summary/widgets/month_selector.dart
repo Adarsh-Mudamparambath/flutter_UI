@@ -65,7 +65,7 @@ class _MonthSelectorState extends State<MonthSelector> {
   String _monthName(int month) {
     const months = [
       "January","February","March","April","May","June",
-      "July","August","Septmber","October","November","December"
+      "July","August","September","October","November","December"
     ];
     return months[month - 1];
   }
