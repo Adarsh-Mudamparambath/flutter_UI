@@ -17,7 +17,7 @@ class BigKpiValue extends StatelessWidget {
           value,
           style: GoogleFonts.openSans(
             fontSize: 30,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
           ),
         ),
         const SizedBox(width: 4),

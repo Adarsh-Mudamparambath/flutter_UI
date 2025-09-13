@@ -50,7 +50,7 @@ class ItemSummaryPage extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 color: AppColors.lightGrey,
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
                 children: const [

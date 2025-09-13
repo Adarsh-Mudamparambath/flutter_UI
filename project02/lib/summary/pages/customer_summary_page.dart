@@ -19,7 +19,7 @@ class CustomerSummaryPage extends StatelessWidget {
       appBar: const CustomAppBar(title: "Customer Summary"),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(top: 24.0, left: 16.0, right: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -32,7 +32,7 @@ class CustomerSummaryPage extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    "\$ 1325",
+                    "\$ 2500.50",
                     style: GoogleFonts.openSans(
                       fontSize: 30,
                       fontWeight: FontWeight.w600,
@@ -80,7 +80,7 @@ const InfoSection(
                 padding: const EdgeInsets.only(bottom: 10),
                 decoration: BoxDecoration(
                   color: AppColors.lightGrey,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
                   children: [
@@ -122,7 +122,7 @@ const InfoSection(
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 60),
             ],
           ),
         ),

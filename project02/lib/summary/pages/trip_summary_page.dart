@@ -45,7 +45,7 @@ class TripSummaryPage extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
                 children: const [
@@ -53,7 +53,7 @@ class TripSummaryPage extends StatelessWidget {
                     title: "KL 18 V 1080",
                     subtitle: "RadhaKrishna VK",
                     label1: "Fuel intake",
-                    value1: "120000 litre",
+                    value1: "12000 litre",
                     label2: "Distance travelled",
                     value2: "35200 KM",
                     number: "0001",

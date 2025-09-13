@@ -7,8 +7,8 @@ class SummaryCardTile extends StatelessWidget {
   final String subtitle;
   final String label1;
   final String value1;
-  final String? label2;   // ✅ optional
-  final String? value2;   // ✅ optional
+  final String? label2;
+  final String? value2;
   final String number;
 
   const SummaryCardTile({
@@ -39,7 +39,6 @@ class SummaryCardTile extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-
               const SizedBox(height: 6),
 
               // Subtitle
@@ -47,33 +46,55 @@ class SummaryCardTile extends StatelessWidget {
                 subtitle,
                 style: GoogleFonts.openSans(
                   fontSize: 12,
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.black.withValues(alpha: 0.6),
                 ),
               ),
-
               const SizedBox(height: 20),
 
-              LayoutBuilder(
-                builder: (context, constraints) {
-                  double gap = constraints.maxWidth > 400 ? 44 : 20;
+              // ✅ Labels + numbers + View button in one row
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  // Label1 + Value1
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          label1,
+                          style: GoogleFonts.openSans(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black.withValues(alpha: 0.6),
+                          ),
+                        ),
+                        Text(
+                          value1,
+                          style: GoogleFonts.openSans(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
 
-                  return Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Label1 + Value1
-                      Column(
+                  if (label2 != null && value2 != null)
+                    Expanded(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            label1,
+                            label2!,
                             style: GoogleFonts.openSans(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: Colors.black.withOpacity(0.6),
+                              color: Colors.black.withValues(alpha: 0.6),
                             ),
                           ),
                           Text(
-                            value1,
+                            value2!,
                             style: GoogleFonts.openSans(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
@@ -82,66 +103,33 @@ class SummaryCardTile extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
 
-                      // ✅ If label2/value2 is provided → render second column
-                      if (label2 != null && value2 != null) ...[
-                        SizedBox(width: gap),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              label2!,
-                              style: GoogleFonts.openSans(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black.withOpacity(0.6),
-                              ),
-                            ),
-                            Text(
-                              value2!,
-                              style: GoogleFonts.openSans(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
+                  // ✅ View button sticks to right
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.pdfRed,
+                        minimumSize: const Size(60, 26),
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4),
                         ),
-                      ],
-
-                      // ✅ Always stick View button 10px from right
-                      Expanded(
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: AppColors.pdfRed,
-                                minimumSize: const Size(60, 26),
-                                padding: EdgeInsets.zero,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                elevation: 4,
-                                shadowColor: Colors.black.withOpacity(0.25),
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                "View",
-                                style: GoogleFonts.openSans(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
+                        elevation: 0, // no shadow
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        "View",
+                        style: GoogleFonts.openSans(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
-                    ],
-                  );
-                },
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -155,7 +143,7 @@ class SummaryCardTile extends StatelessWidget {
             number,
             style: GoogleFonts.openSans(
               fontSize: 12,
-              color: Colors.black.withOpacity(0.6),
+              color: Colors.black.withValues(alpha: 0.6),
             ),
           ),
         ),
