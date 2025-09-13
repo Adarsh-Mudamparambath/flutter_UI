@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project02/item_summary/pages/customer_summary_page.dart';
 import 'package:project02/item_summary/pages/item_summary_page.dart';
 import 'package:project02/item_summary/pages/trip_summary_page.dart';
 import 'package:project02/item_summary/theme/app_theme.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const TripSummaryPage(),
+      home: const CustomerSummaryPage(),
     );
   }
 }
