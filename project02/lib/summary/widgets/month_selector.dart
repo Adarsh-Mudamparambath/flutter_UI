@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:month_picker_dialog/month_picker_dialog.dart';
-import 'package:project02/item_summary/theme/app_colors.dart';
+import 'package:project02/summary/theme/app_colors.dart';
 
 class MonthSelector extends StatefulWidget {
   const MonthSelector({super.key});
@@ -34,7 +34,7 @@ class _MonthSelectorState extends State<MonthSelector> {
       child: Container(
         width: 146,
         height: 39,
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
           color: AppColors.lightGrey,
           borderRadius: BorderRadius.circular(8),
@@ -65,7 +65,7 @@ class _MonthSelectorState extends State<MonthSelector> {
   String _monthName(int month) {
     const months = [
       "January","February","March","April","May","June",
-      "July","August","Septmber","October","November","December"
+      "July","August","September","October","November","December"
     ];
     return months[month - 1];
   }

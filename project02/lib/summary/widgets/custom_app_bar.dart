@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project02/item_summary/theme/app_colors.dart';
+import 'package:project02/summary/theme/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  final String title;
+  const CustomAppBar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +21,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back, size: 20),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  "Item Summary",
+                  title,
                   style: GoogleFonts.openSans(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
