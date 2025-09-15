@@ -19,7 +19,7 @@ class CustomerSummaryPage extends StatelessWidget {
       appBar: const CustomAppBar(title: "Customer Summary"),
       body: SingleChildScrollView(
         child: Padding(
-        padding: const EdgeInsets.only(top: 24.0, left: 16.0, right: 16.0),
+          padding: const EdgeInsets.only(top: 24.0, left: 16.0, right: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -53,12 +53,12 @@ class CustomerSummaryPage extends StatelessWidget {
 
               // Info Section
               // Info Section
-const InfoSection(
-  rows: [
-    {"label": "Total credit sales", "value": "1200 unit"},
-    {"label": "Total collection", "value": "4552 unit"},
-  ],
-),
+              const InfoSection(
+                rows: [
+                  {"label": "Total credit sales", "value": "1200 unit"},
+                  {"label": "Total collection", "value": "4552 unit"},
+                ],
+              ),
 
               const SizedBox(height: 20),
 
@@ -93,8 +93,7 @@ const InfoSection(
                       number: "0001",
                     ),
 
-                                     CustomDivider(),
-
+                    CustomDivider(),
 
                     // Tile 2 - one label
                     const SummaryCardTile(
@@ -105,8 +104,7 @@ const InfoSection(
                       number: "0002",
                     ),
 
-                                      CustomDivider(),
-
+                    CustomDivider(),
 
                     // Tile 3 - two labels
                     const SummaryCardTile(
@@ -117,7 +115,8 @@ const InfoSection(
                       label2: "Unit sold",
                       value2: "1000 unit",
                       number: "0003",
-                    ), CustomDivider(),
+                    ),
+                    CustomDivider(),
                   ],
                 ),
               ),
